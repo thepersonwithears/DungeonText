@@ -1,4 +1,3 @@
-# player.py
 class Player:
     def __init__(self, start_room):
         self.current_room = start_room
