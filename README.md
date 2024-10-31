@@ -9,3 +9,35 @@ Clone the repository and navigate to the main project folder (where `setup.py` i
 
 ```bash
 pip install -e .
+
+```
+
+## Sample Code
+
+```
+from dungeontext_lib import Room, Item, Player, Game
+
+# Create rooms
+forest = Room("Forest", "A dense forest with towering trees.")
+lake = Room("Lake", "A peaceful lake surrounded by tall trees.")
+
+# Connect rooms
+forest.connect("east", lake)
+lake.connect("west", forest)
+
+# Create items
+sword = Item("sword", "A rusty old sword lies on the ground.")
+forest.items.append(sword)
+
+# Initialize player and game
+player = Player(start_room=forest)
+game = Game(player)
+
+# Main loop
+while True:
+    command = input("> ")
+    if command in ("quit", "exit"):
+        print("Goodbye!")
+        break
+    game.interpret(command)
+```
