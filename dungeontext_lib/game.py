@@ -1,7 +1,7 @@
 from .room import Room
 from .item import Item
 from .player import Player
-
+from .utils import Clear
 class Game:
     def __init__(self, player):
         self.player = player
@@ -11,6 +11,7 @@ class Game:
             direction = command.split(" ")[1]
             self.player.move(direction)
         elif command == "look":
+            Clear()
             print(self.player.current_room)
         elif command.startswith("take "):
             item_name = command.split(" ")[1]
