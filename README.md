@@ -1,29 +1,52 @@
-# DungeonText
 
-A simple Python library for creating text-based adventure games. This library provides reusable classes for handling rooms, items, the player, and game logic. It’s designed to be easily extensible, so you can add custom game elements and interactions.
+# DungeonText 🧭
+A simple Python library for creating text-based adventure games. 
+
+This library provides reusable classes for handling rooms, items, the player, and game logic. 
 
 
-## Installation
+## Features
 
-Clone the repository and navigate to the main project folder (where `setup.py` is located). Then, install the library locally using:
+- Create Rooms/Locations
 
-```bash
-pip install -e .
+     ```forest = Room("Forest", "A dense forest with large trees.")```
+- Connect the Rooms to Allow Travel
 
-```
+    ```forest.connect("east", lake, "west", cave)```
 
-## Sample Code - Demonstrates all modules and functions!
+- Create Items
 
-```
-from dungeontext_lib import Room, Item, Player, Game, Clear
+    ```sword = Item("sword", "A rusty old sword lies on the ground.")```
+
+- Add Items to Rooms
+
+    ```forest.items.append(sword)```
+
+
+## Usage/Commands in 0.1
+
+```help``` - Prints full list of commands in game.py file.
+
+```go east``` - Example of travelling.
+
+```look``` - Looks at current location player is in.
+
+```take sword``` - Takes an item if it is in scene.
+
+
+
+## Demo
+
+```from dungeontext_lib import Room, Item, Player, Game, Clear
 
 
 # Create rooms
 forest = Room("Forest", "A dense forest with large trees.")
 lake = Room("Lake", "A peaceful lake surrounded by tall trees.")
+cave = Room("Cave", "A dark and damp cave with a narrow passage.")
 
 # Connect rooms
-forest.connect("east", lake)
+forest.connect("east", lake, "west", cave)
 lake.connect("west", forest)
 
 # Create items
@@ -45,8 +68,17 @@ while True:
         break
     game.interpret(command)
 ```
+
+
 ## Roadmap
 
-> Multiple locations tied to one room (Example: ```forest.connect("east", lake, "west", castle)```)
+- Inventory System
 
-> ```help``` command being in util
+- Combat System
+
+- Puzzle System
+
+### Non-Important Roadmap
+
+- Move ```help``` command into util.py
+
