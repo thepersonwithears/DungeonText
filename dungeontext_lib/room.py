@@ -5,8 +5,14 @@ class Room:
         self.items = []
         self.connections = {}
 
-    def connect(self, direction, room):
-        self.connections[direction] = room
+    def connect(self, *args):
+        if len(args) % 2 != 0:
+            raise ValueError("Arguments should be provided in direction-room pairs.")
+
+        for i in range(0, len(args), 2):
+            direction = args[i]
+            room = args[i + 1]
+            self.connections[direction] = room
 
     def __str__(self):
         return f"{self.name}\n{self.description}"

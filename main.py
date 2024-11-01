@@ -4,9 +4,10 @@ from dungeontext_lib import Room, Item, Player, Game, Clear
 # Create rooms
 forest = Room("Forest", "A dense forest with large trees.")
 lake = Room("Lake", "A peaceful lake surrounded by tall trees.")
+cave = Room("Cave", "A dark and damp cave with a narrow passage.")
 
 # Connect rooms
-forest.connect("east", lake)
+forest.connect("east", lake, "west", cave)
 lake.connect("west", forest)
 
 # Create items
