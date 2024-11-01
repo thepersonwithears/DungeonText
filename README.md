@@ -19,7 +19,7 @@ from dungeontext_lib import Room, Item, Player, Game, Clear
 
 
 # Create rooms
-forest = Room("Forest", "A dense forest with towering trees.")
+forest = Room("Forest", "A dense forest with large trees.")
 lake = Room("Lake", "A peaceful lake surrounded by tall trees.")
 
 # Connect rooms
