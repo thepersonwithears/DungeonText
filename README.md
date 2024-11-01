@@ -15,7 +15,8 @@ pip install -e .
 ## Sample Code
 
 ```
-from dungeontext_lib import Room, Item, Player, Game
+from dungeontext_lib import Room, Item, Player, Game, Clear
+
 
 # Create rooms
 forest = Room("Forest", "A dense forest with towering trees.")
@@ -29,7 +30,7 @@ lake.connect("west", forest)
 sword = Item("sword", "A rusty old sword lies on the ground.")
 forest.items.append(sword)
 
-# Initialize player and game
+# Initialize player and gameo
 player = Player(start_room=forest)
 game = Game(player)
 
@@ -37,6 +38,7 @@ game = Game(player)
 while True:
     command = input("> ")
     if command in ("quit", "exit"):
+        Clear()
         print("Goodbye!")
         break
     game.interpret(command)
