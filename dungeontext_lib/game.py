@@ -2,6 +2,7 @@ from .room import Room
 from .item import Item
 from .player import Player
 from .utils import Clear
+
 class Game:
     def __init__(self, player):
         self.player = player
@@ -16,6 +17,13 @@ class Game:
         elif command.startswith("take "):
             item_name = command.split(" ")[1]
             self.take_item(item_name)
+        elif command == "help":
+            Clear()
+            print("Commands:")
+            print("go <direction> - Move to a different room")
+            print("look - Look around the current room")
+            print("take <item> - Take an item from the current room")
+            print("help - Show this help message")
 
     def take_item(self, item_name):
         item = next((i for i in self.player.current_room.items if i.name == item_name), None)
