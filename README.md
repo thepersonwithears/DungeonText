@@ -45,3 +45,8 @@ while True:
         break
     game.interpret(command)
 ```
+## Roadmap
+
+> Multiple locations tied to one room (Example: ```forest.connect("east", lake, "west", castle)```)
+
+> ```help``` command being in util
