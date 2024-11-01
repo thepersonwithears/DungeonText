@@ -1,5 +1,5 @@
 
-# DungeonText 🧭
+# DungeonText
 A simple Python library for creating text-based adventure games. 
 
 This library provides reusable classes for handling rooms, items, the player, and game logic. 
