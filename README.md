@@ -28,6 +28,8 @@ lake.connect("west", forest)
 
 # Create items
 sword = Item("sword", "A rusty old sword lies on the ground.")
+
+# Adding items to rooms
 forest.items.append(sword)
 
 # Initialize player and gameo
