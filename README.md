@@ -12,7 +12,7 @@ pip install -e .
 
 ```
 
-## Sample Code
+## Sample Code - Demonstrates all modules and functions!
 
 ```
 from dungeontext_lib import Room, Item, Player, Game, Clear
