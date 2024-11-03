@@ -23,7 +23,7 @@ This library provides reusable classes for handling rooms, items, the player, an
     ```forest.items.append(sword)```
 
 
-## Usage/Commands in 0.1
+## Usage/Commands in 1.0
 
 ```help``` - Prints full list of commands in game.py file.
 
