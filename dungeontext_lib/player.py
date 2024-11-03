@@ -13,3 +13,12 @@ class Player:
         else:
             Clear()
             print("You can't go that way.")
+
+
+    def Show_Inventory(self):
+        if self.inventory:  
+            print("You are carrying:")
+            for item in self.inventory:
+                print(f"- {item.name}")
+        else:
+            print("You are not carrying anything.")

@@ -4,6 +4,7 @@ from .player import Player
 from .utils import Clear
 from .utils import Commands
 
+
 class Game:
     def __init__(self, player):
         self.player = player
@@ -21,6 +22,9 @@ class Game:
         elif command == "help":
             Clear()
             Commands()
+        elif command == "inventory":
+            Clear()
+            self.player.Show_Inventory()
     def take_item(self, item_name):
         item = next((i for i in self.player.current_room.items if i.name == item_name), None)
         if item:
