@@ -33,7 +33,7 @@ This library provides reusable classes for handling rooms, items, the player, an
 
 ```take sword``` - Takes an item if it is in scene.
 
-
+```inventory``` - Displays inventory.
 
 ## Demo
 
