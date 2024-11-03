@@ -72,11 +72,11 @@ while True:
 
 ## Roadmap
 
-- Inventory System
-
 - Combat System
 
 - Puzzle System
+
+- Item Use System
 
 ### Non-Important Roadmap
 
