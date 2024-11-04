@@ -80,5 +80,5 @@ while True:
 
 ### Non-Important Roadmap
 
-- Move ```help``` command into util.py
+- Allow more than 2 arguments for room connections.
 
