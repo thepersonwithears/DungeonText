@@ -30,7 +30,9 @@ class Game:
         if item:
             self.player.inventory.append(item)
             self.player.current_room.items.remove(item)
+            Clear()
             print(f"You take the {item_name}.")
         else:
+            Clear()
             print(f"No {item_name} here.")
 
