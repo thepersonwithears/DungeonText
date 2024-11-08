@@ -1,5 +1,9 @@
 from dungeontext_lib import Room, Item, Player, Game, Clear
 
+# Rich 
+
+from rich.console import Console
+console = Console()
 
 # Create rooms
 forest = Room("Forest", "A dense forest with large trees.")
@@ -22,9 +26,9 @@ game = Game(player)
 
 # Main loop
 while True:
-    command = input("> ")
+    command = console.input("[bold white]> [/]")
     if command in ("quit", "exit"):
         Clear()
-        print("Goodbye!")
+        console.print("[bold red]Goodbye![/]")
         break
     game.interpret(command)
